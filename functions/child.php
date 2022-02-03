@@ -1,7 +1,7 @@
 <?php 
 
-require 'vendor/autoload.php';
-require 'config.php';
+require '../vendor/autoload.php';
+require '../config.php';
 
 $session = new SpotifyWebAPI\Session(
     $CLIENT_ID,
@@ -55,7 +55,7 @@ if (isset($_POST['code'])) {
         $image = (array)$birthedChildImage[0];
 
         $birthedChildTracks = $api->getPlaylistTracks($cl);
-        include ('html/child.php');
+        include ('../html/child.php');
    
 } else {
     header('Location: ' . $session->getAuthorizeUrl($options));

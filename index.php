@@ -6,7 +6,7 @@ require 'config.php';
 $session = new SpotifyWebAPI\Session(
     $CLIENT_ID,
     $CLIENT_SECRET,
-    'http://localhost/motherPlaylist/'
+    'http://localhost/MotherS_Playlist/'
 );
 
 $options = [
