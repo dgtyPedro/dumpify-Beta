@@ -27,11 +27,12 @@
         <div class="imageplaylist"> <img src="<?=$image['url']?>" width="200"/></div>
         
         <div class="tablemusics">
-            <p style="text-align: center; width: 80%; color:#FFE100;"><a href="<?=$birthedChild->external_urls->spotify?>"><?=$birthedChild->external_urls->spotify?></a></p>
-            <table>
+        <p style="text-align: center; width: 80%; color:#FFE100;">Listen to the entire playlist at: <a href="<?=$birthedChild->external_urls->spotify?>"><?=$birthedChild->external_urls->spotify?></a></p>
+   
+            <table style="display:none">
                 <?php
 
-                foreach ($birthedChildTracks->items as $track) {
+                foreach (array_slice($birthedChildTracks->items, 0, 15) as $track) {
                     $track = $track->track;
                     $artist = (array)$track->artists[0];
                     $album = get_object_vars($track->album)['name'];
@@ -47,10 +48,11 @@
                 }
 
                 
-
+                
                 ?>
+                
             </table>
-
+            <iframe src="https://open.spotify.com/embed/playlist/<?=$cl?>?utm_source=generator" width="80%" height="500" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
         </div>
     </div>
     

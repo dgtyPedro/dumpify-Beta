@@ -23,7 +23,7 @@
         <input type="hidden" value="<?=$_GET['code']?>" name="code" required>
         <input type="hidden" value="<?=$refreshToken?>" name="refresh" required>
         <input type="text" name="motherlink" placeholder="Mother Playlist Link (max. 1000)" required><br/>
-        <input type="text" name="number" placeholder="Number of Songs for the Child (max. 100)" required><br/>
+        <input type="text" name="number" placeholder="Number of Songs for the Child" required><br/>
         <input type="text" name="childlink" placeholder="Child Playlist Link" required><br/>
         <div class="lastrow"> <button type="submit">Give Birth</button> You MUST own both playlists.</div>
     </form>
