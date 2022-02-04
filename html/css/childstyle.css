@@ -1,44 +1,44 @@
-@import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap");
 body {
-  background-color: #181212;
-  font-family: 'Russo One', sans-serif;
-  color: #FEFFFB;
+  background-color: #457373;
+  font-family: 'Merriweather', serif;
+  color: #EDDFEF;
 }
 
 input {
   width: 100%;
   height: 60px;
-  border: 0px solid white;
-  border-bottom: 2px solid #CC2E2D;
+  border: 0px solid #EDDFEF;
+  border-bottom: 2px solid #B6F2E1;
   font-size: 30px;
   margin-bottom: 10px;
   background-color: transparent;
-  color: #FEFFFB;
-  font-family: 'Russo One', sans-serif;
+  color: #EDDFEF;
+  font-family: 'Merriweather', serif;
 }
 
 ::-webkit-input-placeholder {
   /* Edge */
-  color: #CC2E2D;
+  color: #B6F2E1;
   font-size: 30px;
-  font-family: 'Russo One', sans-serif;
+  font-family: 'Merriweather', serif;
 }
 
 input:focus, textarea:focus, select:focus {
   outline: none;
-  border-bottom: 2px solid #FEFFFB;
-  font-family: 'Russo One', sans-serif;
+  border-bottom: 2px solid #EDDFEF;
+  font-family: 'Merriweather', serif;
 }
 
 button {
   width: 20%;
   height: 60px;
-  background-color: #CC2E2D;
-  border: #7E1E29 3px solid;
+  background-color: #B6F2E1;
+  border: #443850 3px solid;
   border-radius: 7px;
-  color: #181212;
+  color: #457373;
   font-size: 30px;
-  font-family: 'Russo One', sans-serif;
+  font-family: 'Merriweather', serif;
   cursor: pointer;
 }
 
@@ -57,13 +57,13 @@ button {
 
 .logoicon {
   font-size: 40px;
-  color: #FFE100;
+  color: #B6F2E1;
 }
 
 .buggy {
   text-align: end;
   font-size: 30px;
-  color: #7E1E29;
+  color: #443850;
 }
 
 .container2 {
@@ -75,8 +75,8 @@ button {
 
 img {
   border-radius: 10px;
-  -webkit-box-shadow: 0px 0px 36px 13px #7E1E29;
-  box-shadow: 0px 0px 36px 13px #7E1E29;
+  -webkit-box-shadow: 0px 0px 36px 13px #443850;
+  box-shadow: 0px 0px 36px 13px #443850;
 }
 
 .imageplaylist {
@@ -89,8 +89,8 @@ img {
 }
 
 table, th, td {
-  border: 3px solid #7E1E29;
-  color: #FEFFFB;
+  border: 3px solid #443850;
+  color: #EDDFEF;
 }
 
 table {
@@ -98,11 +98,11 @@ table {
 }
 
 a:visited {
-  color: #FFE100;
+  color: #B6F2E1;
 }
 
 a {
   text-decoration: none;
-  color: #FFE100;
+  color: #B6F2E1;
 }
 /*# sourceMappingURL=childstyle.css.map */

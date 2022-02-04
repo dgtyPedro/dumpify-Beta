@@ -1,41 +1,48 @@
-@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap');
+$background: #457373;
+$primary: #B6F2E1;
+$secondary: #B6F2E1;
+$extra: #443850;
+$white: #EDDFEF;
+
+
     body{
-        background-color: #181212;
-        font-family: 'Russo One', sans-serif;
-        color: #FEFFFB;
+        background-color: $background;
+        font-family: 'Merriweather', serif;
+        color: $white;
     }
     
     input{
         width: 100%;
         height: 60px;
-        border: 0px solid white;
-        border-bottom: 2px solid #CC2E2D ;
+        border: 0px solid $white;
+        border-bottom: 2px solid $primary ;
         font-size: 30px;
         margin-bottom: 10px;
         background-color: transparent;
-        color: #FEFFFB;
-        font-family: 'Russo One', sans-serif;   
+        color: $white;
+        font-family: 'Merriweather', serif;   
     }
     ::-webkit-input-placeholder { /* Edge */
-    color: #CC2E2D;
+    color: $primary;
     font-size: 30px;
-    font-family: 'Russo One', sans-serif;
+    font-family: 'Merriweather', serif;
     }
 
     input:focus, textarea:focus, select:focus{
         outline: none;
-        border-bottom: 2px solid #FEFFFB ;
-        font-family: 'Russo One', sans-serif;
+        border-bottom: 2px solid $white ;
+        font-family: 'Merriweather', serif;
     }
     button{
         width: 20%;
         height: 60px;
-        background-color: #CC2E2D;
-        border: #7E1E29 3px solid;
+        background-color: $primary;
+        border: $extra 3px solid;
         border-radius:7px;
-        color: #181212;
+        color: $background;
         font-size: 30px;
-        font-family: 'Russo One', sans-serif;
+        font-family: 'Merriweather', serif;
         cursor: pointer; 
     }
     .container {
@@ -48,12 +55,12 @@
 
     .logoicon{
         font-size: 40px;
-        color: #FFE100;
+        color: $secondary;
     }
     .buggy{
         text-align: end;
         font-size: 30px;
-        color: #7E1E29;
+        color: $extra;
     }
 
     .container2 {
@@ -63,8 +70,8 @@
 
     img{
         border-radius:10px;
-        -webkit-box-shadow: 0px 0px 36px 13px #7E1E29; 
-        box-shadow: 0px 0px 36px 13px #7E1E29;
+        -webkit-box-shadow: 0px 0px 36px 13px $extra; 
+        box-shadow: 0px 0px 36px 13px $extra;
     }
 
     .imageplaylist{
@@ -77,8 +84,8 @@
     }
 
     table, th, td {
-    border: 3px solid #7E1E29;
-    color: #FEFFFB;
+    border: 3px solid $extra;
+    color: $white;
 }
 
     table{
@@ -86,10 +93,10 @@
     }
 
     a:visited{
-        color:#FFE100;
+        color:$secondary;
     }
 
     a{
         text-decoration: none;
-        color: #FFE100;
+        color: $secondary;
     }
