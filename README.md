@@ -15,7 +15,10 @@ $CLIENT_SECRET = 'YOUR CLIENT_SECRET';
 $BASE_URL = 'http://localhost/YOUR-MotherS_Playlist-FOLDER/';
 
 ?>
+
 ```
+
+Edit: Now the application is deployed at https://salty-depths-33832.herokuapp.com, but the user needs to have his account registered at my dashboard. You can request this at https://twitter.com/pedrodooguitryx
 
 ## Photos
 
