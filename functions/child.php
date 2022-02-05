@@ -6,7 +6,7 @@ require '../config.php'; // Declare $CLIENT_ID, $CLIENT_SECRET, $BASE_URL
 $session = new SpotifyWebAPI\Session(
     $CLIENT_ID,
     $CLIENT_SECRET,
-    'http://localhost/motherPlaylist/'
+    $BASE_URL
 );
 
 if (!isset($_POST['motherlink']) && !isset($_POST['childlink']) && !isset($_POST['number'])){
