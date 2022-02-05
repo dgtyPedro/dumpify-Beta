@@ -16,7 +16,7 @@ $options = [
 		'playlist-read-private',
 		'playlist-read-collaborative',
     ],
-	// 'show_dialog' => true
+	'show_dialog' => true
 ];
 
 
