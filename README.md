@@ -1,5 +1,9 @@
 # MotherS_Playlist
 
+## Description
+This is an open source application that acts like a playlist manager for Spotify, for now the user can create randomize one playlist and add the selected songs to another.
+
+
 ## Installation/Usage
 The application does not have his own ID and Secret yet. The user must login at https://developer.spotify.com/dashboard and get their own. After that create a config.php at root 
 following the example:
