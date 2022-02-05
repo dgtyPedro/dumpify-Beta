@@ -19,7 +19,7 @@
     <div class="logoicon"><a href="<?=$BASE_URL?>"><i class="fab fa-spotify"></i> Mother Playlist</a></div>
         
       </div>
-    <form method="post" action="functions/child" style="margin-inline: 10%; margin-top: 100px;">
+    <form method="post" action="functions/child.php" style="margin-inline: 10%; margin-top: 100px;">
         <input type="hidden" value="<?=$_GET['code']?>" name="code" required>
         <input type="hidden" value="<?=$refreshToken?>" name="refresh" required>
         <input type="text" name="motherlink" placeholder="Mother Playlist Link (max. 1000)" required><br/>

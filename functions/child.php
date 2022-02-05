@@ -6,7 +6,7 @@ require '../config.php'; // Declare $CLIENT_ID, $CLIENT_SECRET, $BASE_URL
 $session = new SpotifyWebAPI\Session(
     $CLIENT_ID,
     $CLIENT_SECRET,
-    $BASE_URL
+    'http://localhost/motherPlaylist/'
 );
 
 if (!isset($_POST['motherlink']) && !isset($_POST['childlink']) && !isset($_POST['number'])){
@@ -49,20 +49,22 @@ if (isset($_POST['code'])) {
         $arraychunks = count($random)/100; 
         $arraychunks = (int) $arraychunks + 1;
 
-        if ($arraychunks<=1){
-            $api->replacePlaylistTracks($cl, $random);
-        }else{
-            $y = 0;
-            $api->replacePlaylistTracks($cl, null);
+        try {
+            if ($arraychunks<=1){
+                $api->replacePlaylistTracks($cl, $random);
+            }else{
+                $y = 0;
+                $api->replacePlaylistTracks($cl, null);
 
-            while ($y<$arraychunks*100){
-                $chunktracks = array_slice($random, $y, 100);
-                $api->addPlaylistTracks($cl, $chunktracks);
-                $y += 100;
+                while ($y<$arraychunks*100){
+                    $chunktracks = array_slice($random, $y, 100);
+                    $api->addPlaylistTracks($cl, $chunktracks);
+                    $y += 100;
+                }
             }
-
+        } catch (Exception $e) {
+            echo 'Error Log: ',  $e->getMessage(), "\n";
         }
-        
 
         $birthedChild = $api->getPlaylist($cl); 
 
