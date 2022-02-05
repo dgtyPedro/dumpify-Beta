@@ -6,7 +6,7 @@ require 'config.php';
 $session = new SpotifyWebAPI\Session(
     $CLIENT_ID,
     $CLIENT_SECRET,
-    'http://localhost/MotherS_Playlist/'
+    'https://agile-thicket-21689.herokuapp.com'
 );
 
 $options = [
