@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Elsie+Swash+Caps&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap');
+
+$background: #457373;
+$primary: #B6F2E1;
+$secondary: #B6F2E1;
+$extra: #443850;
+$white: #EDDFEF;
+
+body, html{
+    background-color: $background;
+    margin: 0;
+    padding: 0;
+    // font-family: 'Elsie Swash Caps', cursive;
+    font-family: 'Gamja Flower', cursive;
+}
+
+.title{    
+    padding: 0;
+    flex: 6 0 100%;
+    margin: auto;
+    text-align: center;
+    color: $primary;
+    font-size: 2em;
+    text-shadow: 5px 10px 10px $extra;
+}
+
+.title > img{
+    box-shadow: 0px 0px 30px -15px $extra; 
+}
+
+.card{
+    background-color: $primary;
+    border: 5px solid $extra;
+    -webkit-box-shadow: 0px 0px 30px -15px $extra; 
+    padding: 0;
+    margin: 3vw;
+    height: 30vh;
+    flex: 1 1 150px;
+    text-align: center;
+    line-height: 30vh;
+    transition: transform .3s; 
+    cursor: pointer; 
+}
+
+.card:hover {
+    transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  }
+
+.card > p{
+    padding: 0;
+    margin: 0;
+    font-size: 2.6em;
+    color: $extra;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+}
+
+.wrapper{
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row wrap;
+    align-content: center;
+}
