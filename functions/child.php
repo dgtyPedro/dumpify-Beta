@@ -1,7 +1,7 @@
 <?php 
 
 require '../vendor/autoload.php';
-require '../config.php'; // Declare $childlinkIENT_ID, $childlinkIENT_SECRET, $BASE_URL
+// require '../config.php'; // Declare $childlinkIENT_ID, $childlinkIENT_SECRET, $BASE_URL
 
 $session = new SpotifyWebAPI\Session(
     $CLIENT_ID,
