@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400&display=swap");
+body {
+  background-color: #457373;
+  font-family: 'Merriweather', serif;
+}
+
+.lastrow {
+  color: #B6F2E1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+input {
+  width: 100%;
+  height: 60px;
+  border: 0px solid #EDDFEF;
+  border-bottom: 2px solid #B6F2E1;
+  font-size: 30px;
+  background-color: transparent;
+  color: #FEFFFB;
+  font-family: 'Merriweather', serif;
+}
+
+.custom-select {
+  position: relative;
+  font-size: 30px;
+  color: #B6F2E1;
+  margin-bottom: 10px;
+}
+
+.custom-select select {
+  display: none;
+  /*hide original SELECT element: */
+  color: #B6F2E1;
+}
+
+.select-selected {
+  background-color: transparent;
+  color: #B6F2E1;
+}
+
+/* Style the arrow inside the select element: */
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  color: #B6F2E1;
+}
+
+/* Point the arrow upwards when the select box is open (active): */
+.select-selected.select-arrow-active:after {
+  top: 7px;
+}
+
+/* style the items (options), including the selected item: */
+.select-items div, .select-selected {
+  color: #B6F2E1;
+  padding: 8px 16px;
+  border-bottom: 2px solid #B6F2E1;
+  cursor: pointer;
+}
+
+/* Style items (options): */
+.select-items {
+  position: absolute;
+  background-color: #443850;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+/* Hide the items when the select box is closed: */
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-input-placeholder {
+  /* Edge */
+  color: #B6F2E1;
+  font-size: 30px;
+  font-family: 'Merriweather', serif;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-bottom: 2px solid #FEFFFB;
+  font-family: 'Merriweather', serif;
+  background-color: transparent;
+}
+
+input[type="text"], textarea {
+  background-color: #457373;
+}
+
+button {
+  background-color: #B6F2E1;
+  border: #443850 3px solid;
+  border-radius: 7px;
+  color: #443850;
+  font-size: 30px;
+  font-family: 'Merriweather', serif;
+  cursor: pointer;
+  margin-right: 1vw;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container > div {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  /*grow*/
+}
+
+.logoicon {
+  font-size: 40px;
+  color: #B6F2E1;
+}
+
+.buggy {
+  text-align: end;
+  font-size: 30px;
+  color: #443850;
+}
+
+a {
+  text-decoration: none;
+  color: #B6F2E1;
+}
+/*# sourceMappingURL=homestyle.css.map */

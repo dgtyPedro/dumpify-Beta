@@ -16,7 +16,7 @@ $options = [
 		'playlist-read-private',
 		'playlist-read-collaborative',
     ],
-	'show_dialog' => true
+	// 'show_dialog' => true
 ];
 
 
@@ -27,7 +27,22 @@ if (isset($_GET['code'])) {
         $session->requestAccessToken($_GET['code']);
         $refreshToken = $session->getRefreshToken();
         $api->setAccessToken($session->getAccessToken());
+
+        $me = (array)$api->me();
+        $iduser = $me['id'];
+
+        $objectplaylists = $api->getUserPlaylists($iduser, [
+            'limit' => 20
+        ]);
+
+        $playlists = [];
+
+        foreach ($objectplaylists->items as $playlist) {
+            $playlists[$playlist->id] = $playlist->name;
+        }
+
         include ('html/home.php');
+
     }catch (exception $e){
         header('Location: ' . $session->getAuthorizeUrl($options));
         die();

@@ -1,7 +1,7 @@
 <?php 
 
 require '../vendor/autoload.php';
-require '../config.php'; // Declare $CLIENT_ID, $CLIENT_SECRET, $BASE_URL
+require '../config.php'; // Declare $childlinkIENT_ID, $childlinkIENT_SECRET, $BASE_URL
 
 $session = new SpotifyWebAPI\Session(
     $CLIENT_ID,
@@ -26,14 +26,11 @@ if (isset($_POST['code'])) {
     $childlink = $_POST['childlink'];
     $number = $_POST['number'];
 
-    $ml = substr(substr($motherlink, 34),0, -20); // Extract Mother's Link
-    $cl = substr(substr($childlink, 34),0, -20); // Extract Child's Link
-
     $x = 0;
     $musics = array( );
 
     while($x<=10){
-        $playlistTracks = $api->getPlaylistTracks($ml, ['offset' => $x*100]); // Get X chunk of Mother's Playlist, ex: $x = 1 (1st music - 100th music); $x = 2 (101th music - 200th music)
+        $playlistTracks = $api->getPlaylistTracks($motherlink, ['offset' => $x*100]); // Get X chunk of Mother's Playlist, ex: $x = 1 (1st music - 100th music); $x = 2 (101th music - 200th music)
         foreach ($playlistTracks->items as $track) {
             $track = $track->track;
             $musics[$track->id] = $track->id;   // Save Id of each track
@@ -51,27 +48,27 @@ if (isset($_POST['code'])) {
 
         try {
             if ($arraychunks<=1){
-                $api->replacePlaylistTracks($cl, $random);
+                $api->replacePlaylistTracks($childlink, $random);
             }else{
                 $y = 0;
-                $api->replacePlaylistTracks($cl, null);
+                $api->replacePlaylistTracks($childlink, null);
 
                 while ($y<$arraychunks*100){
                     $chunktracks = array_slice($random, $y, 100);
-                    $api->addPlaylistTracks($cl, $chunktracks);
+                    $api->addPlaylistTracks($childlink, $chunktracks);
                     $y += 100;
                 }
             }
         } catch (Exception $e) {
-            echo 'Error Log: ',  $e->getMessage(), "\n";
+            // echo 'Error Log: ',  $e->getMessage(), "\n";
         }
 
-        $birthedChild = $api->getPlaylist($cl); 
+        $birthedChild = $api->getPlaylist($childlink); 
 
-        $birthedChildImage = $api->getPlaylistImage($cl);
+        $birthedChildImage = $api->getPlaylistImage($childlink);
         $image = (array)$birthedChildImage[0];
 
-        $birthedChildTracks = $api->getPlaylistTracks($cl);
+        $birthedChildTracks = $api->getPlaylistTracks($childlink);
         include ('../html/child.php'); // Render Front-End
    
 } else {
