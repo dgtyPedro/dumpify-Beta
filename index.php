@@ -21,6 +21,7 @@ $options = [
 
 
 $api = new SpotifyWebAPI\SpotifyWebAPI();
+
 if (isset($_GET['code'])) {
     
     try{
@@ -44,7 +45,7 @@ if (isset($_GET['code'])) {
         include ('html/home.php');
 
     }catch (exception $e){
-        header('Location: ' . $session->getAuthorizeUrl($options));
+        header('Location: ' . $BASE_URL);
         die();
     }
     
